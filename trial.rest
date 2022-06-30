@@ -1,0 +1,65 @@
+GET http://localhost:3007/api/blogs
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNvbnNvbGVsb3ZlciIsImlkIjoiNjJiY2Q3MGU2OTE1ODczZjI4Njg5NzRjIiwiaWF0IjoxNjU2NTQzMDI1fQ.pIvCIdLwZNdMofhwh7ogRkVNg1sYV-oj2c4GC6RDnag
+#####
+DELETE   http://localhost:3007/api/blogs/602c15aee9f78e3614d67f25
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdlbmRhcjY3IiwiaWQiOiI2MDJjMGM1NWNiMDk3NTM0M2MzNGNhNGYiLCJpYXQiOjE2MTQxOTQ5MzB9.YB86W3y-MsgVz_0KC8piB7MJcJpzjcLfdVjqs-eDo3s
+
+
+####
+GET http://localhost:3007/api/blogs/62bcd9a5535490172ccaf3a7
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNvbnNvbGVsb3ZlciIsImlkIjoiNjAyYzY4Y2U4ZjI2OGE1NDY0OTRkZmM2IiwiaWF0IjoxNjU2NTM5MDMxfQ.8DILFT-8UZ5elYOP3mU3cTpJjwGWsYYJm782B8Pm4eg
+
+####
+PUT  http://localhost:3007/api/blogs/62bcd9a5535490172ccaf3a7
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNvbnNvbGVsb3ZlciIsImlkIjoiNjJiY2Q3MGU2OTE1ODczZjI4Njg5NzRjIiwiaWF0IjoxNjU2NTQzMDI1fQ.pIvCIdLwZNdMofhwh7ogRkVNg1sYV-oj2c4GC6RDnag
+
+{
+    "likes": true
+}
+
+#####
+POST http://localhost:3007/api/users
+Content-Type: application/json
+
+{
+    "username": "consolelover",
+    "name": "abdulwahab abbas",
+    "password": "maloney"
+}
+####
+
+
+POST http://localhost:3007/api/login
+Content-Type: application/json
+
+{
+    "username": "testingman",
+    "password": "humans"
+}
+/*Testing mode */
+####
+POST http://localhost:3007/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNvbnNvbGVsb3ZlciIsImlkIjoiNjJiY2Q3MGU2OTE1ODczZjI4Njg5NzRjIiwiaWF0IjoxNjU2NTQzMDI1fQ.pIvCIdLwZNdMofhwh7ogRkVNg1sYV-oj2c4GC6RDnag
+
+{
+    "title": "dancing to the tune of love",
+    "bodyText": "development of a refactored API for this new project is a person will to have a well groomed blog for market lovers, this emanate from the hidden information that arise from the uprise in the price of good and services at the point of sales"
+}
+
+#######
+POST http://localhost:3007/api/login
+Content-Type: application/json
+
+{
+    "username": "consolelover",
+    "password": "maloney"
+}
+
+######
+GET http://localhost:3007/api/blogs
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3RpbmdtYW4iLCJpZCI6IjYwMzhjZDdhZDVhZTViMDRiMDRmMjE5YyIsImlhdCI6MTYxNDMzNTQ0MX0.xnVRf6TSy8QpiqRGGWUOZbkZAi1vWAm4RcKpnLZVXTc
+
+#################
+GET http://localhost:3007/api/users
