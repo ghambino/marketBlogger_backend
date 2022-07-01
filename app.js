@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const bloglistRouter = require("../bloglistBackend/controllers/bloglistRouter");
-const userRouter = require("../bloglistBackend/controllers/userRouter");
-const loginRouter = require("../bloglistBackend/controllers/loginRouter");
-const middleware = require("../bloglistBackend/utils/middleware");
+const bloglistRouter = require("./controllers/bloglistRouter");
+const userRouter = require("./controllers/userRouter");
+const loginRouter = require("./controllers/loginRouter");
+const homeRouter = require("./controllers/homeRouter");
+const middleware = require("./utils/middleware");
 const cors = require("cors");
-const config = require("../bloglistBackend/utils/config");
-const logger = require("../bloglistBackend/utils/logger");
+const config = require("./utils/config");
+const logger = require("./utils/logger");
 
 const url = config.MONGODB_URI;
 
@@ -31,6 +32,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("build"));
 
+app.use("/", homeRouter);
 app.use("/api/login", loginRouter);
 app.use("/api/users", userRouter);
 
